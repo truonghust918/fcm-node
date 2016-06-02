@@ -1,6 +1,6 @@
 {
   "name": "fcm-node",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A simple Node.JS interface with Firebase Cloud Messaging (FCM)",
   "main": "index.js",
   "repository": {

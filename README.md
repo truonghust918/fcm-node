@@ -57,5 +57,4 @@ Based on the great work on [fcm-push][7] by [Rasmunandar Rustam][4] cloned and m
 
 ## Changelog
 
-1.0.2 typos
-1.0.1 forked from fcm-push and implemented topic messages return codes
+1.0.3 bugfix with UTF-8 enconding and chunked-encoding transfer
