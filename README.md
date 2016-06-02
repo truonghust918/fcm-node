@@ -6,11 +6,11 @@ A Node.JS simple interface to Google's Firebase Cloud Messaging (FCM)
 
 Via [npm][1]:
 
-    $ npm install fcm-push
+    $ npm install fcm-node
 
 ## Usage
 
-    var FCM = require('fcm-push');
+    var FCM = require('fcm-node');
 
     var serverKey = '';
     var fcm = new FCM(serverKey);
@@ -57,4 +57,5 @@ Based on the great work on [fcm-push][7] by [Rasmunandar Rustam][4] cloned and m
 
 ## Changelog
 
-1.0 forked from fcm-push and implemented topic messages return codes
+1.0.2 typos
+1.0.1 forked from fcm-push and implemented topic messages return codes
