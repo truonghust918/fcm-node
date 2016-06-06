@@ -57,4 +57,4 @@ Based on the great work on [fcm-push][7] by [Rasmunandar Rustam][4] cloned and m
 
 ## Changelog
 
-1.0.3 bugfix with UTF-8 enconding and chunked-encoding transfers
+1.0.4 bugfix with UTF-8 enconding and chunk-encoded transfers
