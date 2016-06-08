@@ -1,11 +1,11 @@
 {
   "name": "fcm-node",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A Node.JS simple interface to Google's Firebase Cloud Messaging (FCM)",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Saber-Tecnologias/fcm-push.git"
+    "url": "git+https://github.com/Saber-Tecnologias/fcm-node.git"
   },
   "keywords": [
     "fcm",
@@ -22,9 +22,9 @@
   "author": "Saber Tecnologias Educacionais e Sociais - Leonardo Pereira <jlcvp@cin.ufpe.br> (www.sabertecnologias.com.br) ",
   "license": "GNU LGPLv3",
   "bugs": {
-    "url": "https://github.com/Saber-Tecnologias/fcm-push/issues"
+    "url": "https://github.com/Saber-Tecnologias/fcm-node/issues"
   },
-  "homepage": "https://github.com/Saber-Tecnologias/fcm-push",
+  "homepage": "https://github.com/Saber-Tecnologias/fcm-node",
   "dependencies": {
     "retry": "^0.9.0"
   }
