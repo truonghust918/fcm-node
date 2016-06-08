@@ -15,7 +15,7 @@ Via [npm][1]:
     var serverKey = '';
     var fcm = new FCM(serverKey);
 
-    var message = {
+    var message = { //this may vary according to the message type (single recipient, multicast, topic, et cetera)
         to: 'registration_token', 
         collapse_key: 'your_collapse_key', 
         data: {
@@ -57,4 +57,6 @@ Based on the great work on [fcm-push][7] by [Rasmunandar Rustam][4] cloned and m
 
 ## Changelog
 
-1.0.5 bugfix with UTF-8 enconding and chunk-encoded transfers 
+1.0.6 bugfix: send function was always returning an error object for multicast messages (multiple registration ids);
+1.0.5 bugfix with UTF-8 enconding and chunk-encoded transfers
+1.0.1 forked from fcm-push and extended to accept topic messages without errors
