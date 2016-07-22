@@ -66,7 +66,8 @@ Based on the great work on [fcm-push][7] by [Rasmunandar Rustam][4] cloned and m
 [10]: https://firebase.google.com/docs/cloud-messaging/http-server-ref
 
 ## Changelog
-1.0.8 - \<FIX\> 'icon' field no longer required in notification 
+1.0.9 - Updated Documentation <br />
+1.0.8 - \<FIX\> 'icon' field no longer required in notification<br /> 
 1.0.7 - renaming repository<br />
 1.0.6 - bugfix: send function was always returning an error object for multicast messages (multiple registration ids)<br />
 1.0.5 - bugfix with UTF-8 enconding and chunk-encoded transfers<br />
