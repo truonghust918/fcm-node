@@ -38,7 +38,12 @@ Via [npm][1]:
         }
     });
 
-See [FCM documentation][2] for details.
+
+## Notes
+* See [FCM documentation][2] for general details.
+* See [Firebase Cloud Messaging HTTP Protocol][10] for details about the HTTP syntax used and JSON fields, notification and data objects. **(STRONGLY RECOMMENDED)**
+* On **iOS**, set **content_available** when the app server needs to send a Send-to-Sync message. An inactive client app executes your logic in the background, while an app in the foreground passes the message to **didReceiveRemoteNotification**. (As seen in [FCM Docs][8])
+* Some **iOS** users report a delay receiving the notifications and even a **'not receive at all'** scenario if the **priority** field is not set. This is due to a delivery policy with **APN** ([See APNs Provider API for a more detailed info][9])   
 
 ## Credits
 
@@ -56,6 +61,9 @@ Based on the great work on [fcm-push][7] by [Rasmunandar Rustam][4] cloned and m
 [5]: https://github.com/h2soft/node-gcm
 [6]: http://www.gnu.org/licenses/lgpl-3.0.txt
 [7]: https://github.com/nandarustam/fcm-push
+[8]: https://firebase.google.com/docs/cloud-messaging/concept-options
+[9]: https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/APNsProviderAPI.html#//apple_ref/doc/uid/TP40008194-CH101-SW2
+[10]: https://firebase.google.com/docs/cloud-messaging/http-server-ref
 
 ## Changelog
 1.0.8 - \<FIX\> 'icon' field no longer required in notification 
