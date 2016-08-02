@@ -66,6 +66,7 @@ Based on the great work on [fcm-push][7] by [Rasmunandar Rustam][4] cloned and m
 [10]: https://firebase.google.com/docs/cloud-messaging/http-server-ref
 
 ## Changelog
+1.0.12 - Refactored the client removing the Event Emitter's Logic to fix concurrency issues. Using pure callbacks now also avoids memory leak in specific scenarios with lots of parallel calls to <b>send</b> function. <br />
 1.0.11 - \<FIX\> send function returning error objects when multicast messages (or individually targeted) returned both error and success keys on response message (even with error counter = 0 ) <br /> 
 1.0.9 - Updated Documentation <br />
 1.0.8 - \<FIX\> 'icon' field no longer required in notification<br /> 
