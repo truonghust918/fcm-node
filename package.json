@@ -1,6 +1,6 @@
 {
   "name": "fcm-node",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "A Node.JS simple interface to Google's Firebase Cloud Messaging (FCM). Supports both android and iOS, including topic messages, and parallel calls",
   "main": "index.js",
   "repository": {
@@ -22,7 +22,7 @@
     "parallel send"
   ],
   "author": "Saber Tecnologias Educacionais e Sociais - Leonardo Pereira <jlcvp@cin.ufpe.br> (www.sabertecnologias.com.br) ",
-  "license": "GNU LGPLv3",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Saber-Tecnologias/fcm-node/issues"
   },
