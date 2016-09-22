@@ -51,14 +51,14 @@ Based on the great work on [fcm-push][7] by [Rasmunandar Rustam][4] cloned and m
 
 ## License
 
-[GNU LESSER GENERAL PUBLIC LICENSE v3][6]
+[MIT][6]
 
 [1]: http://github.com/isaacs/npm
 [2]: https://firebase.google.com/docs/cloud-messaging/server
 [3]: mailto:jlcvp@cin.ufpe.br
 [4]: mailto:nandar.rustam@gmail.com
 [5]: https://github.com/h2soft/node-gcm
-[6]: http://www.gnu.org/licenses/lgpl-3.0.txt
+[6]: https://opensource.org/licenses/MIT
 [7]: https://github.com/nandarustam/fcm-push
 [8]: https://firebase.google.com/docs/cloud-messaging/concept-options
 [9]: https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/APNsProviderAPI.html#//apple_ref/doc/uid/TP40008194-CH101-SW2
