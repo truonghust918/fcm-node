@@ -41,8 +41,7 @@ Via [npm][1]:
 ## Notes
 * See [FCM documentation][2] for general details.
 * See [Firebase Cloud Messaging HTTP Protocol][10] for details about the HTTP syntax used and JSON fields, notification and data objects. **(STRONGLY RECOMMENDED)**
-* On **iOS**, set **content_available** when the app server needs to send a Send-to-Sync message. An inactive client app executes your logic in the background, while an app in the foreground passes the message to **didReceiveRemoteNotification**. (As seen in [FCM Docs][8])
-* Some **iOS** users report a delay receiving the notifications and even a **'not receive at all'** scenario if the **priority** field is not set. This is due to a delivery policy with **APN** ([See APNs Provider API for a more detailed info][9])   
+* On **iOS**, set **content_available** when the app server needs to send a Send-to-Sync message. An inactive client app executes your logic in the background, while an app in the foreground passes the message to **didReceiveRemoteNotification**. (As seen in [FCM Docs][8])  
 
 ## Credits
 
