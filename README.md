@@ -13,10 +13,10 @@ Via [npm][1]:
 ## Usage
 
 There are 2 ways to use this lib:
-#### The **classic** one 
+### The **classic** one 
    1. Generate a **Server Key** on your app's firebase console and pass it to the **FCM** constructor
    2. Create a _message object_ and call the **send()** function
-##### Classic usage example:
+#### Classic usage example:
 ```js
     var FCM = require('fcm-node');
     var serverKey = 'YOURSERVERKEYHERE'; //put your server key here
@@ -46,13 +46,13 @@ There are 2 ways to use this lib:
     });
 ```
 
-#### The **new** one 
+### The **new** one 
    1. Go to your [Service account tab][13] in your project's settings and download/generate your app's private key. 
    2. Add this file in your project's workspace
    3. Import that file with a `require('path/to/privatekey.json')` style call and pass the object to the **FCM** constructor
    4. Create a _message object_ and call the **send()** function
    
-##### "New" usage example
+#### "New" usage example
 ```js
     var FCM = require('fcm-node')
     
