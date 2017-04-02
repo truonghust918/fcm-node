@@ -33,7 +33,8 @@
     "retry": "^0.9.0"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "debugtest": "mocha --debug-brk $npm_package_options_mocha"
   },
   "directories": {
     "test": "test"
