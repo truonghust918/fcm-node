@@ -46,6 +46,39 @@ There are 2 ways to use this lib:
     });
 ```
 
+## Topic subscription
+
+For more detailed information please go to `https://developers.google.com/instance-id/reference/server`.
+
+### Subscribe Device Tokens to Topics
+
+```js
+var FCM = require('fcm-node');
+var serverKey = 'YOURSERVERKEYHERE'; //put your server key here
+var fcm = new FCM(serverKey);
+
+fcm.subscribeToTopic([ 'device_token_1', 'device_token_2' ], 'some_topic_name', (err, res) => {
+    assert.ifError(err);
+    assert.ok(res);
+    done();
+});
+```
+
+### Unsubscribe Device Tokens to Topics
+
+```js
+var FCM = require('fcm-node');
+var serverKey = 'YOURSERVERKEYHERE'; //put your server key here
+var fcm = new FCM(serverKey);
+
+fcm.unsubscribeToTopic([ 'device_token_1', 'device_token_2' ], 'some_topic_name', (err, res) => {
+    assert.ifError(err);
+    assert.ok(res);
+    done();
+});
+
+```
+
 ### The **new** one 
    1. Go to your [Service account tab][13] in your project's settings and download/generate your app's private key. 
    2. Add this file in your project's workspace
