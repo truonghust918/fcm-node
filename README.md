@@ -46,39 +46,6 @@ There are 2 ways to use this lib:
     });
 ```
 
-## Topic subscription
-
-For more detailed information please go to `https://developers.google.com/instance-id/reference/server`.
-
-### Subscribe Device Tokens to Topics
-
-```js
-var FCM = require('fcm-node');
-var serverKey = 'YOURSERVERKEYHERE'; //put your server key here
-var fcm = new FCM(serverKey);
-
-fcm.subscribeToTopic([ 'device_token_1', 'device_token_2' ], 'some_topic_name', (err, res) => {
-    assert.ifError(err);
-    assert.ok(res);
-    done();
-});
-```
-
-### Unsubscribe Device Tokens to Topics
-
-```js
-var FCM = require('fcm-node');
-var serverKey = 'YOURSERVERKEYHERE'; //put your server key here
-var fcm = new FCM(serverKey);
-
-fcm.unsubscribeToTopic([ 'device_token_1', 'device_token_2' ], 'some_topic_name', (err, res) => {
-    assert.ifError(err);
-    assert.ok(res);
-    done();
-});
-
-```
-
 ### The **new** one 
    1. Go to your [Service account tab][13] in your project's settings and download/generate your app's private key. 
    2. Add this file in your project's workspace
@@ -117,6 +84,53 @@ fcm.unsubscribeToTopic([ 'device_token_1', 'device_token_2' ], 'some_topic_name'
     })
 ```
 
+## Topic subscription on web clients
+
+Web clients doesn't have a "native" way to subscribe/unsubscribe from topics other than manually requesting, managing and registering with the google's iid servers. To resolve this "barrier" your server can easily handle the web client's sub/unsub requests with this lib.
+
+For more detailed information, please take a look at [Google InstanceID Reference][14].
+
+*PS: For mobile clients you can still use the native calls to subscribe/unsubscribe with one-liner calls*
+##### Android
+```java
+FirebaseMessaging.getInstance().subscribeToTopic("news");
+```
+##### iOS
+```objective-c
+[[FIRMessaging messaging] subscribeToTopic:@"/topics/news"];
+```
+
+
+
+### Subscribe Device Tokens to Topics
+
+```js
+var FCM = require('fcm-node');
+var serverKey = 'YOURSERVERKEYHERE'; //put your server key here
+var fcm = new FCM(serverKey);
+
+fcm.subscribeToTopic([ 'device_token_1', 'device_token_2' ], 'some_topic_name', (err, res) => {
+    assert.ifError(err);
+    assert.ok(res);
+    done();
+});
+```
+
+### Unsubscribe Device Tokens to Topics
+
+```js
+var FCM = require('fcm-node');
+var serverKey = 'YOURSERVERKEYHERE'; //put your server key here
+var fcm = new FCM(serverKey);
+
+fcm.unsubscribeToTopic([ 'device_token_1', 'device_token_2' ], 'some_topic_name', (err, res) => {
+    assert.ifError(err);
+    assert.ok(res);
+    done();
+});
+
+```
+
 ## Notes
 * See [FCM documentation][2] for general details.
 * See [Firebase Cloud Messaging HTTP Protocol][10] for details about the HTTP syntax used and JSON fields, notification and data objects. **(STRONGLY RECOMMENDED)**
@@ -144,8 +158,10 @@ Based on the great work on [fcm-push][7] by [Rasmunandar Rustam][4] cloned and m
 [11]: https://firebase.google.com/support/release-notes/admin/node
 [12]: https://firebase.google.com/docs/reference/admin/node/admin.messaging
 [13]: https://console.firebase.google.com/project/_/settings/serviceaccounts/adminsdk
-
+[14]: https://developers.google.com/instance-id/reference/server#create_relationship_maps_for_app_instances
+[15]: https://github.com/sofiapm
 ## Changelog
+1.2.0 - Added topic subscriptions management for web clients - *Thanks to [@sofiapm][15] for this feature*   
 1.1.0 - Support for the new firebase node.js sdk methods  
 1.0.14 - Added example file to quick tests <br />
 1.0.13 - Added a error response in case of TopicsMessageRateExceeded response <br />
