@@ -29,6 +29,7 @@
   "homepage": "https://github.com/jlcvp/fcm-node",
   "dependencies": {
     "firebase-admin": "^4.2.1",
+    "https-proxy-agent": "^2.2.1",
     "mocha": "^4.0.1",
     "retry": "^0.9.0"
   },
