@@ -28,19 +28,23 @@
   },
   "homepage": "https://github.com/jlcvp/fcm-node",
   "dependencies": {
-    "firebase-admin": "^7.1.0",
-    "https-proxy-agent": "^2.2.1",
-    "retry": "^0.9.0"
+    "firebase-admin": "^8.3.0",
+    "https-proxy-agent": "^2.2.3",
+    "retry": "^0.9.0",
+    "snyk": "^1.298.1"
   },
   "devDependencies": {
     "mocha": "^4.0.1"
   },
   "scripts": {
     "test": "mocha --exit",
-    "debugtest": "mocha --debug-brk $npm_package_options_mocha --exit"
+    "debugtest": "mocha --debug-brk $npm_package_options_mocha --exit",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "directories": {
     "test": "test"
   },
-  "tonicExampleFilename": "example.js"
+  "tonicExampleFilename": "example.js",
+  "snyk": true
 }
