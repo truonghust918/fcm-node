@@ -54,7 +54,7 @@ There are 2 ways to use this lib:
    
 #### "New" usage example
 ```js
-    var FCM = require('fcm-node')
+    const FCM = require('fcm-node')
     
     var serverKey = require('path/to/privatekey.json') //put the generated private key path here    
     
@@ -82,6 +82,13 @@ There are 2 ways to use this lib:
             console.log("Successfully sent with response: ", response)
         }
     })
+```
+#### Multi client support (thanks to @nswbmw)
+```
+const FCM = require('fcm-node')
+
+let fcm1 = new FCM(KEY_1)
+let fcm2 = new FCM(KEY_2)
 ```
 
 ## Topic subscription on web clients
@@ -162,9 +169,11 @@ Based on the great work on [fcm-push][7] by [Rasmunandar Rustam][4] cloned and m
 [15]: https://github.com/sofiapm
 [16]: https://github.com/crackjack
 [17]: https://github.com/cesardmoro
+[18]: https://github.com/nswbmw
 
 ## Changelog
-1.5.2 - fixed bug whre send's callback were called twice - *Thanks to [@cesardmoro][17] for this fix*
+1.6.0 - Multi client support - *Thanks to [@nswbmw][18] for this feature*
+1.5.2 - fixed a bug where the send callback was being called twice - *Thanks to [@cesardmoro][17] for this fix*
 1.3.0 - Added proxy capabilities - *Thanks to [@crackjack][16] for this feature*
 1.2.0 - Added topic subscriptions management for web clients - *Thanks to [@sofiapm][15] for this feature*   
 1.1.0 - Support for the new firebase node.js sdk methods  
